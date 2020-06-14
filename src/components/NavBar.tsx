@@ -7,9 +7,9 @@ interface Props {}
 
 const navbars = [
   { link: '/', iconSrc: '/icons/home.png', iconTitle: 'home' },
-  { link: '/', iconSrc: '/icons/like.png', iconTitle: 'like' },
-  { link: '/', iconSrc: '/icons/pencel.png', iconTitle: 'pencel' },
-  { link: '/', iconSrc: '/icons/camera.png', iconTitle: 'camera' },
+  { link: '/likes', iconSrc: '/icons/like.png', iconTitle: 'like' },
+  { link: '/blogs', iconSrc: '/icons/pencel.png', iconTitle: 'pencel' },
+  { link: '/photos', iconSrc: '/icons/camera.png', iconTitle: 'camera' },
 ]
 
 const NavBar: FC<Props> = () => {

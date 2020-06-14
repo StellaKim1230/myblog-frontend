@@ -1,18 +1,23 @@
 import React from 'react'
-import { BrowserRouter as Router } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
-import NavBar from './components/NavBar'
+import LayoutTemplate from './templates/LayoutTemplate'
+
+import HomeContainer from './containers/HomeContainer'
 
 import './App.scss'
 
 function App() {
   return (
     <Router>
-      <div className="App">
-        <header className="App__header">
-          <NavBar />
-        </header>
-      </div>
+      <LayoutTemplate>
+        <Switch>
+          <Route path="/" exact component={HomeContainer} />
+          <Route path="/likes" exact component={HomeContainer} />
+          <Route path="/blogs" exact component={HomeContainer} />
+          <Route path="/photos" exact component={HomeContainer} />
+        </Switch>
+      </LayoutTemplate>
     </Router>
   )
 }
