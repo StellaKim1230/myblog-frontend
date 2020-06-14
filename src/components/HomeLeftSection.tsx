@@ -12,6 +12,12 @@ const links = [
     imgAlt: 'profile',
     title: '김지은',
   },
+  {
+    link: '/github',
+    imgSrc: '/images/github.png',
+    imgAlt: 'github',
+    title: 'repository',
+  },
 ]
 
 const HomeLeftSection: FC<Props> = () => {
