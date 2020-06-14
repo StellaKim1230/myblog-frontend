@@ -6,20 +6,20 @@ import { Link } from 'react-router-dom'
 interface Props {}
 
 const navbars = [
-  { link: '/', iconSrc: '/icons/home.png', iconTitle: 'home' },
-  { link: '/likes', iconSrc: '/icons/like.png', iconTitle: 'like' },
-  { link: '/blogs', iconSrc: '/icons/pencel.png', iconTitle: 'pencel' },
-  { link: '/photos', iconSrc: '/icons/camera.png', iconTitle: 'camera' },
+  { link: '/', imgSrc: '/icons/home.png', imgAlt: 'home' },
+  { link: '/likes', imgSrc: '/icons/like.png', imgAlt: 'like' },
+  { link: '/blogs', imgSrc: '/icons/pencel.png', imgAlt: 'pencel' },
+  { link: '/photos', imgSrc: '/icons/camera.png', imgAlt: 'camera' },
 ]
 
 const NavBar: FC<Props> = () => {
   return (
     <nav className="NavBar" role="navigation">
       <ul className="NavBar__list">
-        {navbars.map(({ link, iconSrc, iconTitle }) => (
-          <li key={iconTitle} className="NavBar__item">
+        {navbars.map(({ link, imgSrc, imgAlt }) => (
+          <li key={imgAlt} className="NavBar__item">
             <Link to={link}>
-              <img src={iconSrc} alt={iconTitle}></img>
+              <img src={imgSrc} alt={imgAlt}></img>
             </Link>
           </li>
         ))}
