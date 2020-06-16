@@ -1,5 +1,11 @@
+@import '../styles/_responsive';
+
 .NavBar {
   padding: 1rem 20rem;
+
+  @include mobile {
+    padding: 1rem 2rem;
+  }
 }
 
 .NavBar__list {
