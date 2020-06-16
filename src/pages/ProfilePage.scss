@@ -1,0 +1,17 @@
+@import '../styles/_variable';
+@import '../styles/_responsive';
+
+.ProfilePage__introduce {
+  position: relative;
+  text-align: center;
+}
+
+.ProfilePage__image {
+  max-width: 500px; // tablet 이상
+  margin: 0 auto;
+  border-radius: 4px;
+
+  @include mobile {
+    max-width: 360px;
+  }
+}

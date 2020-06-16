@@ -7,7 +7,7 @@ interface Props {}
 
 const links = [
   {
-    link: '/mypage',
+    link: '/profile',
     imgSrc: '/images/profile.jpg',
     imgAlt: 'profile',
     title: '김지은',
