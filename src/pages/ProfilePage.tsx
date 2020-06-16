@@ -12,6 +12,8 @@ const ProfilePage: FC<Props> = () => {
         src="/images/mypage-profile.jpg"
         alt="mypage profile"
       />
+      <h1 className="ProfilePage__name">김지은</h1>
+      <div className="ProfilePage__introAdd">소개 추가</div>
     </div>
   )
 }

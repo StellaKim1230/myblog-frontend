@@ -7,11 +7,31 @@
 }
 
 .ProfilePage__image {
-  max-width: 500px; // tablet 이상
+  max-width: 700px; // tablet 이상
   margin: 0 auto;
   border-radius: 4px;
 
   @include mobile {
     max-width: 340px;
+  }
+}
+
+.ProfilePage__name {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-top: 1.4rem;
+  letter-spacing: 0.3rem;
+}
+
+.ProfilePage__introAdd {
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: $font-blue-color;
+
+  &:hover,
+  &:active {
+    text-decoration: underline;
+    cursor: pointer;
   }
 }
