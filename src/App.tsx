@@ -5,6 +5,8 @@ import LayoutTemplate from './templates/LayoutTemplate'
 import HomeContainer from './containers/HomeContainer'
 import ProfilePage from './pages/ProfilePage'
 
+import Sample from './components/samples/Sample'
+
 import './App.scss'
 
 function App() {
@@ -17,6 +19,7 @@ function App() {
           <Route path="/blogs" exact component={HomeContainer} />
           <Route path="/photos" exact component={HomeContainer} />
           <Route path="/profile" exact component={ProfilePage} />
+          <Route path="/sample" exact component={Sample} />
         </Switch>
       </LayoutTemplate>
     </Router>
