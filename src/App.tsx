@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import LayoutTemplate from './templates/LayoutTemplate'
 import HomeContainer from './containers/HomeContainer'
 import ProfilePage from './pages/ProfilePage'
+import SignupPage from './pages/SignupPage'
 
 import Sample from './components/samples/Sample'
 
@@ -19,6 +20,7 @@ function App() {
           <Route path="/blogs" exact component={HomeContainer} />
           <Route path="/photos" exact component={HomeContainer} />
           <Route path="/profile" exact component={ProfilePage} />
+          <Route path="/signup" exact component={SignupPage} />
           <Route path="/sample" exact component={Sample} />
         </Switch>
       </LayoutTemplate>
