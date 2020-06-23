@@ -1,6 +1,6 @@
 import React, { FC, useContext } from 'react'
 
-import { SampleContext } from '../../hooks/sampleContext'
+import { SampleContext } from '../../contexts/sampleContext'
 
 interface Props {}
 

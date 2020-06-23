@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 
 import Red from './Red'
-import { SampleProvider } from '../../hooks/sampleContext'
+import { SampleProvider } from '../../contexts/sampleContext'
 
 interface Props {}
 

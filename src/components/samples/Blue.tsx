@@ -2,7 +2,7 @@ import React, { FC, useContext } from 'react'
 
 import Green from './Green'
 
-import { SampleContext } from '../../hooks/sampleContext'
+import { SampleContext } from '../../contexts/sampleContext'
 
 interface Props {}
 
