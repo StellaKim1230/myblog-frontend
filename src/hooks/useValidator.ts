@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react'
-import { SignInfo } from '../@types/model'
+import { UserInfo } from '../@types/model'
 
-type Validator = (values: SignInfo) => SignInfo
+type Validator = (values: UserInfo) => UserInfo
 
 const useValidator = (callback: () => void, validate: Validator) => {
-  const [values, setValues] = useState<SignInfo>({
+  const [values, setValues] = useState<UserInfo>({
     email: '',
     password: '',
   })

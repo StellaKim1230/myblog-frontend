@@ -1,10 +1,10 @@
-import { SignInfo } from '../@types/model'
+import { UserInfo } from '../@types/model'
 
 const emailPattern = /^[\w-.%]+@([\w-]{2,}\.)+[a-zA-Z]{2,4}$/
 const passwordPattern = /^(?=.*[A-Z])(?=.*[\d])(?=.*[\W]).{8,}$/
 
-export const validate = (values: SignInfo) => {
-  let errors: SignInfo = {
+export const validate = (values: UserInfo) => {
+  let errors: UserInfo = {
     email: '',
     password: '',
   }
