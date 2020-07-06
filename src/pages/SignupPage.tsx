@@ -1,11 +1,20 @@
 import React, { FC, useState } from 'react'
 
+import { validate } from '../utils/signUtils'
+import useValidator from '../hooks/useValidator'
+
 interface Props {}
 
 const SignupPage: FC<Props> = () => {
   const [email, setEmail] = useState('')
   const [password, setPasswrod] = useState('')
 
+  const signup = () => {
+    console.log('signup')
+  }
+
+  const { values } = useValidator(signup, validate)
+  console.log(values)
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
@@ -29,19 +38,14 @@ const SignupPage: FC<Props> = () => {
   return (
     <form onSubmit={(e) => handleSubmit(e)}>
       <label htmlFor="email">email: </label>
-      <input
-        type="email"
-        id="email"
-        name="email"
-        onChange={handleChange}
-      ></input>
+      <input type="email" id="email" name="email" onChange={handleChange} />
       <label htmlFor="password">password: </label>
       <input
         type="password"
         id="password"
         name="password"
         onChange={handleChange}
-      ></input>
+      />
       <input type="submit" value="회원가입"></input>
     </form>
   )
