@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react'
+import React, { FC } from 'react'
 
 import { validate } from '../utils/signUtils'
 import useValidator from '../hooks/useValidator'
@@ -6,14 +6,11 @@ import useValidator from '../hooks/useValidator'
 interface Props {}
 
 const SignupPage: FC<Props> = () => {
-  const [email, setEmail] = useState('')
-  const [password, setPasswrod] = useState('')
-
   const signup = () => {
     console.log('signup')
   }
 
-  const { values } = useValidator(signup, validate)
+  const { values, handleChange } = useValidator(signup, validate)
   console.log(values)
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -21,18 +18,16 @@ const SignupPage: FC<Props> = () => {
     try {
       const res = await fetch('http://localhost:4000/user/signup', {
         method: 'post',
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify({
+          email: values.email,
+          password: values.password,
+        }),
       })
 
       console.log(res)
     } catch (err) {
       console.error(err)
     }
-  }
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.name === 'password') setPasswrod(e.target.value)
-    if (e.target.name === 'email') setEmail(e.target.value)
   }
 
   return (
