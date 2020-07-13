@@ -1,42 +1,44 @@
-## Available Scripts
+# Stella's Blog Front
 
-In the project directory, you can run:
+## Skill Set
 
-### `yarn start`
+- react.js: 16.13.1
+- typescript: 3.9.6
+- testing library: jest
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 설치 및 실행
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+```bash
+$ git clone
+$ yarn (모듈 설치)
+$ yarn start (실행)
+$ yarn test (테스트코드 실행)
+```
 
-### `yarn test`
+## branch strategy
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- 티켓번호 : SBF-1 (SBF : Stella Blog Front, 번호는 git issue 번호와 동일)
+- 운영 : master
+- 개발 : develop
+- 기능 추가 및 유지보수 : feature/\*
+- 버그 수정 : bugfix/\*
+- 핫픽스 : hotfix/\*
+- 릴리즈 : release/\*
 
-### `yarn build`
+## directory of project
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+├── src/
+│   ├── @types/
+│   ├── components/
+│   ├── containers/
+│   ├── contexts/
+│   ├── hooks/
+│   ├── pages/
+│   ├── styles/
+│   ├── templates/
+│   ├── utils/
+│   ├── App.tsx
+│   └── index.tsx
+└── tsconfig.json
+```
