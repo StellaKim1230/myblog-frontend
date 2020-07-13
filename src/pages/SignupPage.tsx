@@ -6,12 +6,6 @@ import useValidator from '../hooks/useValidator'
 interface Props {}
 
 const SignupPage: FC<Props> = () => {
-  const signup = () => {
-    console.log('signup')
-  }
-
-  const { values, handleChange } = useValidator(signup, validate)
-
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
@@ -30,6 +24,8 @@ const SignupPage: FC<Props> = () => {
     }
   }
 
+  const { values, errors, handleChange } = useValidator(handleSubmit, validate)
+
   return (
     <form onSubmit={(e) => handleSubmit(e)}>
       <label htmlFor="email">email: </label>
@@ -42,6 +38,8 @@ const SignupPage: FC<Props> = () => {
         onChange={handleChange}
       />
       <input type="submit" value="회원가입"></input>
+      <p>{errors.email}</p>
+      <p>{errors.password}</p>
     </form>
   )
 }

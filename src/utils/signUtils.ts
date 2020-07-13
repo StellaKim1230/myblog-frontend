@@ -9,19 +9,19 @@ export const validate = (values: UserInfo) => {
     password: '',
   }
 
-  if (!values.email) {
+  if (values.email.length === 0) {
     errors.email = 'Email address is required'
   }
 
-  if (!emailPattern.test(values.email)) {
+  if (values.email.length !== 0 && !emailPattern.test(values.email)) {
     errors.email = 'Email address is invalid'
   }
 
-  if (!values.password) {
+  if (values.password.length === 0) {
     errors.password = 'Password is required'
   }
 
-  if (!passwordPattern.test(values.password)) {
+  if (values.password.length !== 0 && !passwordPattern.test(values.password)) {
     errors.password = 'Password is invalid'
   }
 
