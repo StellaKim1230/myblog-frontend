@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { UserInfo } from '../@types/model'
 
 type Validator = (values: UserInfo) => UserInfo
@@ -9,24 +9,11 @@ const useValidator = (callback: () => void, validate: Validator) => {
     password: '',
   })
 
-  useEffect(() => {
-    setValues({ email: 'test@test.com', password: 'test1234' })
-  }, [])
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.name === 'password') {
-      setValues({
-        email: values.email,
-        password: e.target.value,
-      })
-    }
-
-    if (e.target.name === 'email') {
-      setValues({
-        email: e.target.value,
-        password: values.password,
-      })
-    }
+    setValues((values: UserInfo) => ({
+      ...values,
+      [e.target.name]: e.target.value,
+    }))
   }
 
   return {

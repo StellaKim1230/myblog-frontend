@@ -11,7 +11,7 @@ const SignupPage: FC<Props> = () => {
   }
 
   const { values, handleChange } = useValidator(signup, validate)
-  console.log(values)
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
