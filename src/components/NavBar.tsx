@@ -17,7 +17,6 @@ const navbars = [
 const NavBar: FC<Props & RouteComponentProps> = ({ history }) => {
   return (
     <nav className="NavBar" role="navigation">
-      <Button title="회원가입" onClick={() => history.push('/signup')} />
       <ul className="NavBar__list">
         {navbars.map(({ link, imgSrc, imgAlt }) => (
           <li key={imgAlt} className="NavBar__item">
@@ -26,6 +25,7 @@ const NavBar: FC<Props & RouteComponentProps> = ({ history }) => {
             </Link>
           </li>
         ))}
+        <Button title="회원가입" onClick={() => history.push('/signup')} />
       </ul>
     </nav>
   )
