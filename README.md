@@ -2,6 +2,7 @@
 
 ## Skill Set
 
+- node.js: 12.18.2
 - react.js: 16.13.1
 - typescript: 3.9.6
 - testing library: jest
