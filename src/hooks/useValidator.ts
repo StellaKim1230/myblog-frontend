@@ -6,6 +6,7 @@ import { debounce } from 'lodash'
 type Validator = (values: UserInfo) => UserInfo
 
 const initializeState = {
+  name: '',
   email: '',
   password: '',
 }

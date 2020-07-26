@@ -5,8 +5,13 @@ const passwordPattern = /^(?=.*[A-Z])(?=.*[\d])(?=.*[\W]).{8,}$/
 
 export const validate = (values: UserInfo) => {
   let errors: UserInfo = {
+    name: '',
     email: '',
     password: '',
+  }
+
+  if (values.name.length === 0) {
+    errors.name = 'Name is required'
   }
 
   if (values.email.length === 0) {
