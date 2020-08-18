@@ -13,12 +13,15 @@ const SignupPage: FC<Props> = () => {
 
     try {
       const res = await fetch('http://localhost:4000/user/signup', {
-        method: 'post',
+        method: 'POST',
         body: JSON.stringify({
           name: values.name,
           email: values.email,
           password: values.password,
         }),
+        headers: {
+          'Content-Type': 'application/json',
+        },
       })
 
       console.log(res)
