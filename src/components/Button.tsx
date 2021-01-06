@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 
 interface Props {
   title: string
-  onClick: () => void
+  onClick?: () => void
 }
 
 const Button: FC<Props> = ({ title, onClick }) => {
