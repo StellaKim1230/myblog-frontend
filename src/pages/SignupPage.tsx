@@ -8,7 +8,6 @@ import useValidator from '../hooks/useValidator'
 interface Props {}
 
 const SignupPage: FC<Props> = () => {
-  console.log('signup')
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 

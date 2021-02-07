@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 import LayoutTemplate from './templates/LayoutTemplate'
@@ -11,13 +11,6 @@ import Sample from './components/samples/Sample'
 import './App.scss'
 
 function App() {
-  useEffect(() => {
-    const { gapi } = window as any
-    gapi.load('auth2', () => ({
-      client_id: process.env.REACT_APP_GOOGLE_GLIENT_ID
-    }))
-  }, [])
-
   return (
     <Router>
       <LayoutTemplate>
